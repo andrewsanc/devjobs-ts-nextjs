@@ -1,3 +1,9 @@
+import JobPosts from "@/components/job-posts";
+
 export default function Home() {
-  return <>{"hello"}</>;
+  return (
+    <>
+      <JobPosts />
+    </>
+  );
 }
