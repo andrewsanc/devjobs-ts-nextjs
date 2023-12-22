@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={`${kumbh.className} bg-light-grey text-very-dark-blue relative h-[500px]`}
+        suppressHydrationWarning
       >
         <Header />
         {children}

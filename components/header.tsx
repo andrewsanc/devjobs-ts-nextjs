@@ -1,4 +1,3 @@
-import { BsMoon, BsSun } from "react-icons/bs";
 import ThemeSwitch from "./theme-switch";
 import Link from "next/link";
 

@@ -22,7 +22,7 @@ export default function FilterBar() {
         <div className='flex items-center gap-2'>
           <button
             type='submit'
-            className='rounded-[6px] bg-violet sm:w-[123px] h-[48px] md:w-[80px] w-[48px] text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-light-violet'
+            className='rounded-[6px] bg-violet h-[48px] m:w-[123px] md:w-[80px] w-[48px] text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-light-violet'
           >
             <span className='sm:block hidden'>Search</span>
             <span className='sm:hidden '>
