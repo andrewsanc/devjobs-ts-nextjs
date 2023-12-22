@@ -1,5 +1,6 @@
 import { JobPost } from "@/lib/types";
 import Image from "next/image";
+import Link from "next/link";
 
 interface JobPostCardProps {
   jobPost: JobPost;
@@ -7,7 +8,7 @@ interface JobPostCardProps {
 
 export default function JobPostCard(props: JobPostCardProps) {
   const {
-    jobPost: { company, logo, position, postedAt, location, contract },
+    jobPost: { company, logo, position, postedAt, location, contract, id },
   } = props;
 
   return (
@@ -26,7 +27,12 @@ export default function JobPostCard(props: JobPostCardProps) {
       <div className='flex gap-2 text-gray'>
         <span>{postedAt}</span>&#x2022;<span>{contract}</span>
       </div>
-      <p className='font-bold text-xl'>{position}</p>
+      <Link
+        className='font-bold text-xl cursor-pointer hover:text-gray transition'
+        href={`/jobs/${id}`}
+      >
+        {position}
+      </Link>
       <p className='text-gray'>{company}</p>
       <p className='mt-auto text-violet text-sm font-bold'>{location}</p>
     </div>
