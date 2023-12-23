@@ -6,7 +6,7 @@ export default function FilterBar() {
   return (
     <div className='flex justify-center relative'>
       <form
-        className='absolute -top-10 h-[80px] bg-[#fff] rounded-[6px] flex items-center justify-around gap-4 py-1 w-[80%]'
+        className='absolute -top-10 h-[80px] bg-[#fff] dark:bg-very-dark-blue rounded-[6px] flex items-center justify-around gap-4 py-1 w-[80%]'
         onSubmit={(e) => e.preventDefault()}
       >
         <div className='text-violet text-2xl flex items-center gap-2'>
@@ -16,7 +16,7 @@ export default function FilterBar() {
           <input
             type='search'
             placeholder='Filter by title..'
-            className='mx-2 outline-none'
+            className='mx-2 outline-none dark:text-[#fff] dark:bg-very-dark-blue'
           />
         </div>
         <div className='flex items-center gap-2'>

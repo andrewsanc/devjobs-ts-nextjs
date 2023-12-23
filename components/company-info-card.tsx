@@ -12,7 +12,7 @@ export default function CompanyInfoCard(props: CompanyInfoCardProps) {
 
   return (
     <div className='flex justify-center relative'>
-      <div className='flex flex-col justify-center items-center sm:flex-row sm:items-center w-[80%] bg-[#fff] rounded-[6px] sm:h-[140px] h-[205px] absolute -top-8'>
+      <div className='flex flex-col justify-center items-center sm:flex-row sm:items-center w-[80%] bg-[#fff] dark:bg-very-dark-blue rounded-[6px] sm:h-[140px] h-[205px] absolute -top-8'>
         <div className='sm:h-[140px] h-[50px] sm:w-[140px] w-[50px] rounded-[10px] sm:rounded-l-[6px] sm:rounded-r-none bg-[#000] flex justify-center items-center p-1 absolute sm:static -top-6'>
           <Image
             src={logo}
@@ -31,7 +31,7 @@ export default function CompanyInfoCard(props: CompanyInfoCardProps) {
           </div>
           <button
             type='button'
-            className='rounded-[6px] bg-dark-grey h-[48px] w-[147px] text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-light-violet hover:text-violet'
+            className='rounded-[6px] bg-violet/20 dark:bg-[#fff]/10 h-[48px] w-[147px] text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-violet/35 hover:text-violet dark:hover:bg-[#fff]/35 dark:hover:text-[#fff]'
           >
             Company Site
           </button>

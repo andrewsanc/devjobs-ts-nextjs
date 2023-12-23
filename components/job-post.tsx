@@ -33,7 +33,7 @@ export default function JobPost(props: JobPostProps) {
   return (
     <>
       <div className='flex justify-center mt-40'>
-        <div className='flex flex-col w-[80%] bg-[#fff] rounded-[6px] py-6 px-4'>
+        <div className='flex flex-col w-[80%] bg-[#fff] dark:bg-very-dark-blue rounded-[6px] py-6 px-4'>
           <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between'>
             <div className='flex flex-col gap-1'>
               <div className='flex gap-2 text-gray'>
@@ -46,7 +46,7 @@ export default function JobPost(props: JobPostProps) {
             </div>
             <button
               type='button'
-              className='rounded-[6px] bg-violet h-[48px] sm:w-[147px] mt-10 sm:m-0 text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-light-violet'
+              className='rounded-[6px] bg-violet dark:bg- h-[48px] sm:w-[147px] mt-10 sm:m-0 text-[#fff] font-semibold flex items-center justify-center gap-2 transition hover:bg-light-violet'
             >
               Apply Now
             </button>
@@ -81,7 +81,7 @@ export default function JobPost(props: JobPostProps) {
       </div>
 
       <div className='w-full mt-12'>
-        <div className='bg-[#fff] flex items-center sm:justify-between h-[96px] px-10'>
+        <div className='bg-[#fff] dark:bg-very-dark-blue flex items-center sm:justify-between h-[96px] px-10'>
           <div className='sm:block hidden'>
             <p className='font-bold text-xl'>{position}</p>
             <p className='text-gray'>{company}</p>

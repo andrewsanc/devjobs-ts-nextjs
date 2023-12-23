@@ -3,11 +3,17 @@
 import { useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
-export default function ThemeSwitch() {
+interface ToggleSwitchProps {
+  onToggleChange: () => void;
+}
+
+export default function ToggleSwitch(props: ToggleSwitchProps) {
+  const { onToggleChange } = props;
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
+    onToggleChange();
   };
 
   return (
@@ -26,9 +32,9 @@ export default function ThemeSwitch() {
           className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 bg-[#fff]`}
         >
           <span
-            className={`dot h-6 w-6 rounded-full bg-light-violet duration-200 ${
-              isChecked ? "translate-x-[28px]" : ""
-            }`}
+            className={`dot h-6 w-6 rounded-full ${
+              isChecked ? "bg-light-violet" : "bg-violet"
+            } duration-200 ${isChecked ? "translate-x-[28px]" : ""}`}
           ></span>
         </span>
         <span className='sm:text-xl text-2xl text-[#fff]'>

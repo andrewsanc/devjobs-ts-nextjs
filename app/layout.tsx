@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import ThemeContextProvider from "@/context/theme-context-provider";
 
 const kumbh = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -18,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${kumbh.className} bg-light-grey text-very-dark-blue relative h-[500px]`}
+        className={`${kumbh.className} bg-light-grey text-very-dark-blue relative h-[500px] dark:bg-midnight dark:text-[#fff] transition-all`}
         suppressHydrationWarning
       >
-        <Header />
-        {children}
+        <ThemeContextProvider>
+          <Header />
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   );
