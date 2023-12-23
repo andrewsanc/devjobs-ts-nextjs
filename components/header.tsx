@@ -16,7 +16,10 @@ export default function Header() {
         >
           devjobs
         </Link>
-        <ToggleSwitch onToggleChange={toggleTheme} />
+        <ToggleSwitch
+          onToggleChange={toggleTheme}
+          setDefaultToggle={theme === "light" ? false : true}
+        />
       </div>
     </header>
   );

@@ -1,20 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 interface ToggleSwitchProps {
   onToggleChange: () => void;
+  setDefaultToggle?: boolean;
 }
 
 export default function ToggleSwitch(props: ToggleSwitchProps) {
-  const { onToggleChange } = props;
-  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const { onToggleChange, setDefaultToggle = false } = props;
+  const [isChecked, setIsChecked] = useState<boolean>(setDefaultToggle);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
     onToggleChange();
   };
+
+  useEffect(() => {
+    setIsChecked(setDefaultToggle);
+  }, [setDefaultToggle]);
 
   return (
     <>
