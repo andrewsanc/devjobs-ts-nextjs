@@ -1,19 +1,36 @@
 "use client";
 
+import React, { FormEvent, SetStateAction } from "react";
 import { BsSearch } from "react-icons/bs";
 
-export default function FilterBar() {
+interface FilterBarProps {
+  filteredText: string;
+  setFilteredText: (value: SetStateAction<string>) => void;
+}
+
+export default function FilterBar(props: FilterBarProps) {
+  const { filteredText, setFilteredText } = props;
+
+  function handleOnFormSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFilteredText(e.currentTarget.search.value);
+  }
+
+  function clearFormText() {}
+
   return (
     <div className='flex justify-center relative'>
       <form
         className='absolute -top-10 h-[80px] bg-[#fff] dark:bg-very-dark-blue rounded-[6px] flex items-center justify-around gap-4 py-1 w-[80%]'
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleOnFormSubmit}
       >
         <div className='text-violet text-2xl flex items-center gap-2'>
           <span className='text-violet text-xl hidden sm:block'>
             <BsSearch />
           </span>
           <input
+            id='search'
+            name='search'
             type='search'
             placeholder='Filter by title..'
             className='mx-2 outline-none dark:text-[#fff] dark:bg-very-dark-blue'
