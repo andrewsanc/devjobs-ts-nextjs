@@ -3,16 +3,12 @@ import JobPost from "@/components/job-post";
 import { jobPostData } from "@/lib/data";
 
 interface PageProps {
-  params?: { [key: string]: string };
-  query?: { [key: string]: string };
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default function Page(props: PageProps) {
   const { params } = props;
-
-  if (!params?.id) {
-    return <div>no id found</div>;
-  }
 
   const [
     {
