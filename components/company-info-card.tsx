@@ -23,8 +23,10 @@ export default function CompanyInfoCard(props: CompanyInfoCardProps) {
           />
         </div>
         <div className='flex flex-col items-center text-center sm:flex-row sm:justify-between w-full mx-6 gap-4'>
-          <div className='flex flex-col gap-2'>
-            <p className='text-very-dark-blue text-2xl font-bold'>{company}</p>
+          <div className='flex flex-col sm:items-start gap-2'>
+            <p className='text-very-dark-blue dark:text-[#fff] text-2xl font-bold'>
+              {company}
+            </p>
             <a className='text-gray' href={website}>
               {website}
             </a>

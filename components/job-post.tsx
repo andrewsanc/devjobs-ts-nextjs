@@ -80,7 +80,7 @@ export default function JobPost(props: JobPostProps) {
         </div>
       </div>
 
-      <div className='w-full mt-12'>
+      <div className='w-full mt-12 sticky bottom-0'>
         <div className='bg-[#fff] dark:bg-very-dark-blue flex items-center sm:justify-between h-[96px] px-10'>
           <div className='sm:block hidden'>
             <p className='font-bold text-xl'>{position}</p>
